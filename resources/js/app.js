@@ -30,3 +30,7 @@ Vue.component('example-component', require('./components/ExampleComponent.vue').
 const app = new Vue({
     el: '#app',
 });
+
+window.UIkit = require('uikit');
+window.Icons = require('uikit/dist/js/uikit-icons');
+UIkit.use(Icons);

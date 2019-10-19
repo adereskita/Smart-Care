@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "tel-u-care",
+  "private_key_id": "fc2949ee837ab7238fbb9e6aac2cd6c92e52e155",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQDev1qb9rzIJ8T5\n7od8dDc1yYYSv52/kqw8Xmwmosvm5gC2Q5QhT/IptMZf9xc3SspKy6v9FdydQOr6\nDHMnSHjfCGBVdoF2VN/1ZmxYDM/egOp8LtHGQuQz8oTnqeK+20mnZUiYatS9zs7I\n09CSRAaErPEdG/UyIRfj0P13Puh95BXgKE/QMzojUkOpyEh6mFzaOhc4BCDU7bXQ\nM6m0cYc2GXAyQOdhPlkWqedNd2MLLdyGcoOOIwADMxa4uQG6WSc5uKNA4MwNaX0z\nRZBqapbtqiu0RxHsWM9zTJ0GucF+/w3fA5XmNciPOY+xWKGk5NZiks6qvZ9pqnfn\nmjYWpqKHAgMBAAECggEATJazCwlto8y4188CWvKCwUXHic7E6Mf/3MoCmc5EGeJf\nwEvANSwN8fUseHa3TtWydMFPI7hOoOtfYBbDyXALz3RL21bh8NQCJZjQC/5rwu/E\nsGpQysDZQltTA2zQgBtaWepjabTh7VmclETwZDprm1bzmLSyPEhQtI55eHTy78XG\npt8anIJNW8L07S+Saq41el76Fto7lZW1pbKTvfhZU0BIpYZO5lRfk/jtUgbxHHqV\n9HrwHaBqbNdz01ZPHgp/noKErNEl9gc9d2aJtbrNMuMJDRe4ZTgB8Nnkf93E4gDL\nEGjYQLDh2Zf+3Gk6ksLwKgWQ+YD9Z55+dqbQqqDj8QKBgQD7o2pQdS8ea/aQJK9l\nc560Kdj6xaF/lOQt7OXER7TiMNnRvrOOfjCw8ctlpYXitFU14GxQ9SYrhsJFSCVp\ngcwkEwt2jt6N847wOmTRJ/zaUxbCQsM1FF64S+6EPIhxxzDCBtUwpnOEjTJNeYPy\nzDu3Xs+4ygjBiqEq5upknXe1+wKBgQDim74MfifINwxCkjOiXBrDD82lKY9ivwLt\nezFu0FKuS5kNA9gBG4vrcLrGJlDZb4w2PArTdRrSSmMh4vny1EODVS9sARSjT4fC\noeaqK9CzJ8NJRMp8bUYC97NJO/Ro9r9PlG12S5VuN/KTwor208f3T1AsRMs8nJ+T\n+IPtuOA75QKBgQDXYHYVaUcsFaISm6OYBM7YS10QvmjNBwYKHNJIHku+sastb7jF\nhFJukHXTiUm/0TOBipWK8Vh7Nrs+i1KiLFsqoTZVglEQVF+KU6CIuF4eC7HWEUh9\nPPMZcLw0aI8sOx4LY8fC/SSwVh2w3AnInW+bMkY+VoYKCXqKetwxw+l7UwKBgGD+\n8PY/+Z9FkMXd9qQEcKAV35xWkb1erU4hcSNRoFJioXxkrMyskdORSSEPvYOUr5t3\nT9r7QSPKG2yhzwMVwGAy0j2UqNTOcfnpeuZUItzMpFZ0T4e67kDO7brnItLa60CQ\n89myuJ+Y6wg8OWc1d15wYIzSVXv4PoYD1dSnUbPRAoGANansIlLF2lWTZbSO3iqS\n/gTY7WPCpFdeIo0BqW7eGNUUy4E5WLOGVgSChD23DN+iXCnD0AxJe7zoOae3roVD\nqQPpGhlXX324rWRjqCskjnWMPWgR/Jwjifh23qEbeFQmRHIYcF2E3aLVIAyLvifL\nuL4H1uCZV8eEf1cejXOlrk4=\n-----END PRIVATE KEY-----\n",
+  "client_email": "tel-u-care@appspot.gserviceaccount.com",
+  "client_id": "100352749707271234079",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/tel-u-care%40appspot.gserviceaccount.com"
+}
