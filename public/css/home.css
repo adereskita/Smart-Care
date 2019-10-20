@@ -1,0 +1,36 @@
+body{
+    background-color: #eeeeee;
+    width: 100%;
+}
+
+#nav-app-name{
+    font-size: 16pt;
+}
+
+#navbar-sticky{
+    background-color: rgba(33, 33, 33, 0.15);
+}
+
+#login:hover{
+    background-color: rgba(33, 33, 33, 0.2);
+    border-color: #ffffff;
+}
+
+
+#sign-in{
+    background-color: rgba(88, 88, 88, 0.2);
+    border-color: #eeeeee;
+}
+
+#sign-in:hover{
+    background-color: rgba(33, 33, 33, 0.2);
+    border-color: #ffffff;
+}
+
+#tel-u-logo{
+    font-size: 14pt;
+}
+
+#heading-text{
+    font-size: 32pt;
+}
