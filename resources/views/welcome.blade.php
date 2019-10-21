@@ -74,7 +74,9 @@
         <div>
             <div class="uk-card uk-card-default uk-card-body uk-width-2-3@m uk-height-medium">
                 <img class="uk-margin-remove-right" src="images/smart-care-logo.svg" width=48 height=48 alt="" uk-svg>
-                <h3 class="uk-card-title uk-text-center">Health Diagnose</h3>
+                <h3 class="uk-card-title uk-text-center">
+                    Health Diagnose
+                </h3>
                 <p class="uk-text-muted">
                     We take good care of you
                 </p>
@@ -82,7 +84,9 @@
         </div>
         <div>
             <div class="uk-card uk-card-default uk-card-body uk-width-2-3@m uk-height-small">
-                <h3 class="uk-card-title uk-text-center">Call Service</h3>
+                <h3 class="uk-card-title uk-text-center">
+                    Call Service
+                </h3>
                 <p class="uk-text-muted">
                     Take initiative to call
                 </p>
