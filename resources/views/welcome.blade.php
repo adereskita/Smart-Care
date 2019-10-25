@@ -94,7 +94,9 @@
         </div>
         <div>
             <div class="uk-card uk-card-default uk-card-body uk-width-2-3@m uk-height-small">
-                <h3 class="uk-card-title uk-text-center">Health Record</h3>
+                <h3 class="uk-card-title uk-text-center">
+                    Health Record
+                    </h3>
                 <p class="uk-text-muted">
                     Intellegent collecting health data
                 </p>
