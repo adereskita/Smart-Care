@@ -18,6 +18,9 @@ Route::get('/', function () {
 Route::get('/register', function () {
     return view('register');
 });
+Route::get('/dashboar', function () {
+    return view('dashboar');
+});
 
 Route::get('/firebase','FirebaseController@index');
 
