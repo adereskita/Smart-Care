@@ -35,6 +35,7 @@ return [
     |
     */
 
+
     'guards' => [
         'web' => [
             'driver' => 'session',
@@ -64,17 +65,22 @@ return [
     | Supported: "database", "eloquent"
     |
     */
-
+    // 'providers' => [
+    //     'users' => [
+    //         'driver' => 'firebase',
+    //         'model' => \csrui\LaravelFirebaseAuth\User::class,
+    //     ],
+    // ],
     'providers' => [
         'users' => [
             'driver' => 'eloquent',
             'model' => App\User::class,
         ],
 
-        // 'users' => [
-        //     'driver' => 'database',
-        //     'table' => 'users',
-        // ],
+        'users' => [
+            'driver' => 'database',
+            'table' => 'users',
+        ],
     ],
 
     /*

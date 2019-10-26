@@ -7,6 +7,10 @@ use Illuminate\Support\Facades\Gate;
 
 class AuthServiceProvider extends ServiceProvider
 {
+    // Firebase Auth
+    // Auth::viaRequest('firebase', function ($request) {
+    //     return app(FirebaseGuard::class)->user($request);
+    // });
     /**
      * The policy mappings for the application.
      *

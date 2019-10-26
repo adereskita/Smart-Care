@@ -6,7 +6,7 @@
         <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-        <title>Tel-U Smar Care</title>
+        <title>Home | Tel-U Smart Care</title>
 
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
@@ -38,7 +38,7 @@
                     <li class="uk-nav"><a style="color:#ffffff" href="#heading-line" uk-scroll>Home</a></li>
                     <li class="uk-nav"><a style="color:#ffffff" href="#feature-container" uk-scroll>Feature</a></li>
                     <li class="uk-nav"><a style="color:#ffffff" href="#about-container" uk-scroll>About</a></li>
-                    <li class="uk-nav"><a style="color:#ffffff" href="#contact-head">Contact Us</a></li>
+                    <li class="uk-nav"><a style="color:#ffffff" href="#contact-head" uk-scroll>Contact Us</a></li>
                 </ul>
                 <div class="uk-navbar-item uk-visible@m">
                     <a id="login" class="uk-button uk-button-default tm-button-default uk-icon uk-text-light" 
@@ -64,7 +64,7 @@
                     with smart care.
                     </p>
                     <a id="sign-in" class="uk-text-light uk-button uk-button-default tm-button-default uk-icon uk-margin-large-left" 
-                            style="color:#ffffff; border-radius:15px " href="#">
+                            style="color:#ffffff; border-radius:15px " href="/register">
                             Sign up
                     </a>
             </div>

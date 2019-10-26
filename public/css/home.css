@@ -71,10 +71,10 @@ body{
     margin: 0px 200px;
 }
 
-#about-headline{
+/* #about-headline{
     /* border-bottom: #212121 solid; */
     /* border-width: 1px; */
-}
+/* } */
 
 #contact-head{
     background-image: linear-gradient(#B2DCDF, #6BAFB1);
