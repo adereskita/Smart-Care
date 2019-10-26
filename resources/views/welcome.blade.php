@@ -42,7 +42,7 @@
                 </ul>
                 <div class="uk-navbar-item uk-visible@m">
                     <a id="login" class="uk-button uk-button-default tm-button-default uk-icon uk-text-light" 
-                    style="color:#ffffff; border-radius:15px " href="#">Login</a>
+                    style="color:#ffffff; border-radius:15px " href="/login">Login</a>
                 </div>
             </div>
          </div> 
