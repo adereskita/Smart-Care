@@ -1,6 +1,11 @@
 body{
-    background-color: #eeeeee;
+    background-color: #f7f7f7 ;
     width: 100%;
+}
+
+#home{
+    background-image: linear-gradient(#6BAFB1, #B2DCDF, #F9F5FC);
+    height: 70em;
 }
 
 #nav-app-name{
@@ -8,7 +13,7 @@ body{
 }
 
 #navbar-sticky{
-    background-color: rgba(33, 33, 33, 0.15);
+    background-color: rgba(33, 33, 33, 0.35);
 }
 
 #login:hover{
@@ -16,6 +21,15 @@ body{
     border-color: #ffffff;
 }
 
+#heading-line{
+    z-index: 2;
+    position: relative;
+}
+
+#heading-image{
+    z-index: 10;
+    /* position: absolute; */
+}
 
 #sign-in{
     background-color: rgba(88, 88, 88, 0.2);
@@ -32,5 +46,160 @@ body{
 }
 
 #heading-text{
-    font-size: 32pt;
+    font-size: 42pt;
 }
+
+#feature-headline{
+    border-bottom: #212121 solid;
+    border-width: 2px;
+    color: #212121;
+}
+
+#feature-image{
+    width: 420px;
+    height: 420px;
+}
+
+#feature-container{
+    background-color: #ffffff;
+}
+
+#about-container{
+    background-color: #ffffff;
+}
+#about-text{
+    margin: 0px 200px;
+}
+
+#about-headline{
+    /* border-bottom: #212121 solid; */
+    /* border-width: 1px; */
+}
+
+#contact-head{
+    background-image: linear-gradient(#B2DCDF, #6BAFB1);
+
+}
+
+#contact-head h2,p{
+    color: #fefefe;
+}
+
+#phone-icon{
+    color: #ffffff;
+}
+
+
+@media (max-width:1200px) {
+    #feature-headlines{
+        margin-top: 100px !important;
+        margin-left: auto !important;
+    }
+    #feature-image{
+        margin-top: 180px !important;
+    }
+    #feature-text{
+        margin-top: 140px !important;
+    }
+    #heading-text{
+        font-size: 38pt;
+    }
+    #heading-line{
+        margin-top: 115px;
+    }
+  }
+
+@media (max-width:880px) {
+    #feature-headlines{
+        margin-top: 0px !important;
+        margin-left: auto !important;
+    }
+    #feature-image{
+        margin-top: 140px !important;
+        margin-left: auto !important;
+    }
+    #feature-text{
+        margin-top: 140px !important;
+    }
+    #heading-text{
+        font-size: 32pt;
+    }
+    #home{
+        height: 600px !important;
+    }
+    #heading-line{
+        margin-top: 60px !important;
+        margin-bottom: 100px;
+    }
+      #heading-img{
+          margin-top: 50px;
+          width: 420px !important;
+          height: 420px !important;
+          /* display: none !important; */
+      }
+      #about-text {
+        margin-left: 20px !important;
+        font-size: 12pt;
+        width: 600px;
+        text-align: justify;
+    }
+  }
+  @media (max-width:680px){
+      #about-container img{
+          margin-left: 30px !important;
+          width: 140px;
+          height: 140px;
+      }
+      #about-text {
+        margin-left: 20px !important;
+        font-size: 10pt;
+        width: 500px;
+        text-align: justify;
+    }
+      #nav-item li a{
+          font-size: 9pt !important;
+      }
+    #heading-img{
+        margin-top: 50px;
+        display: none !important;
+    }
+    #feature-text p{
+        font-size: 14pt;
+    }
+    #phone-icon{
+        margin-top: 20px;
+        width: 30px;
+    }
+    #contact-numb p{
+        margin-top: 20px;
+        font-size: 12pt;
+    }
+  }
+
+  @media (max-width:520px){
+    #feature-text p{
+        text-align: center;
+        font-size: 14pt;
+    }
+    #feature-text{
+        margin-left: auto !important;
+    }
+    #feature-image{
+        margin-top: 140px !important;
+        margin-left: auto !important;
+    }
+    #heading-line{
+        margin-bottom: 40px !important;
+    }
+    #card-items{
+        margin-top: 40px !important;
+        margin-left: 40px !important;
+        width: 320px;
+    }
+    #about-text {
+        margin-left: 20px !important;
+        font-size: 10pt;
+        width: 400px;
+        text-align: justify;
+    }
+  }
