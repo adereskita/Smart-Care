@@ -125,7 +125,7 @@
                 </h3>
             </div>
         </div>
-<<<<<<< HEAD
+
         <div>
             <div class="uk-card uk-card-default uk-card-body uk-width-2-3@m uk-height-small">
                 <h3 class="uk-card-title uk-text-center">
@@ -134,7 +134,7 @@
                 <p class="uk-text-muted">
                     Intellegent collecting health data
                 </p>
-=======
+
         <div class="uk-margin-large-top uk-panel">
             <div>
                 <img id="feature-image" class="uk-align-left uk-margin-large-left uk-margin-xlarge-top uk-padding-small" src="images/feature.png" alt="">
@@ -144,7 +144,7 @@
                 <p class="uk-margin-top uk-text-lead uk-text-light">Check Your Blood Pressure Anytime</p>
                 <p class="uk-margin-top uk-text-lead uk-text-light">Send Your Health Record to Doctor</p>
                 <p class="uk-margin-top uk-text-lead uk-text-light">Diagnose Your Symptomps Automaticaly</p>
->>>>>>> f9781b4e01895fc31243f41898c4bcdeb799bee3
+<!-- >>>>>>> f9781b4e01895fc31243f41898c4bcdeb799bee3 -->
             </div>
         </div>
     </div>

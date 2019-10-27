@@ -1,43 +1,79 @@
 body{
-  /*  background-color: #eeeeee;*/
+   background-color: #f7f7f7 ;
+    width: 100%;
  
 }
-#nav-dash{
-	width: 8%;
-	padding:1.5%;
-	padding-top: 10%;
-	padding-bottom: 10%;
-	height: 104%;
-	background-color:  #4ccded;
+@media (max-width: 600px) {
+  section {
+    -webkit-flex-direction: column;
+    flex-direction: column;
+  }
 }
+section {
+  display: -webkit-flex;
+  display: flex;
+}
+nav {
+  flex: 1;
+  width: 25%;
+}
+
+/* Style the list inside the menu */
+nav ul {
+  list-style-type: none;
+  padding: 1%;
+ background-image: linear-gradient(#6BAFB1, #B2DCDF, #F9F5FC);
+  position: fixed;
+}
+nav li{
+	text-align: center;
+	padding: 8px 16px;
+  	text-decoration: none;
+}
+
 li{
 	margin-top: 100%;
 	margin-bottom: 100%;
 }
+#dashboard{
+	flex: 9;
+	width: 80%;
+	margin: 3%;
+}
 #dash-box{
-	margin-top: -45%;
-	margin-left: 10%;
-	margin-bottom: 4%;
-	width: 20%;
+	/*margin-top: -45%;*/ 
+	flex: 8;
+	width: 80%;
 
 }
 p{
 	font-size: 14px;
 }
 img{
-	margin-top: -50%;
-	background-color: #330000;
-	border-radius: 50%;
+	
 }
 #dash-card{
+	width: 30%;
 	border-radius: 14%;
 	
 }
 #countainer{
-	margin-top: -48%;
-	margin-left: 32%;
-	height: 100%;
-	width: 67%;
-	border-radius: 10%;
+	/*margin-top: -46%;*/
+	
+	/*width: 67%;*/
+	-webkit-flex:5;
+	margin-left: 29%;
+	flex: 4;
+	width: 69%;
+	border-radius: 12%;
 
+}
+
+#form-input{
+  flex: 8;
+  width: 75%;
+  background-color: #ffffff;
+  padding: 2%;
+  border-radius: 3%;
+  margin: 2%;
 }

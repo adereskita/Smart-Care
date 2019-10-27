@@ -15,12 +15,15 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-<<<<<<< HEAD
-Route::get('/dashboar', function () {
+Route::get('/dashboardView', function () {
     return view('dashboar');
 });
-=======
 
->>>>>>> f9781b4e01895fc31243f41898c4bcdeb799bee3
-Route::get('/firebase','FirebaseController@index');
+Route::get('/inputDataView', function () {
+    return view('inputData');
+});
+// =======
+
+// >>>>>>> f9781b4e01895fc31243f41898c4bcdeb799bee3
+// Route::get('/firebase','FirebaseController@index');
 
