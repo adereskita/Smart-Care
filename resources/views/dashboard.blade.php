@@ -17,58 +17,59 @@
         <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
 	</head>
 	<body class ="uk-height-1-1 uk-width-1-1">
-		<div id="nav-dash" class="uk-nav-container uk-height-1-2">
-		    <ul class="uk-nav uk-nav-default">
-		        <li class="uk-active"><a href="#">Dashboard</a></li>
-		        <li class="uk-active"><a href="#">History</a></li>
-		        <li class="uk-active"><a href="#">Profile</a></li>
+	<section>
+	  <nav class="uk-margin-remove-bottom">
+		    <ul>
+		      <li><img class="" src="images/smart-care-logo.png" width=30 height=30 alt="" uk-svg><br>
+		      		<a href="dashboardView">Dashboard</a></li>
+		      <li><img class="" src="images/smart-care-logo.png" width=30 height=30 alt="" uk-svg><br>
+		      		<a href="#">History</a></li>
+		      <li><img class="" src="images/smart-care-logo.png" width=30 height=30 alt="" uk-svg><br>
+		      		<a href="#">Profile</a></li>
 		    </ul>
-		</div>
-		 <div id="dash-box" class="uk-child-width-2-3@m  uk-grid-small uk-grid-match"  uk-grid>
-        <!-- <div> -->
-            <div id="dash-card" class="uk-card uk-card-default uk-card-body ">
-                <!-- <center><img src=""> src="images/smart-care-logo.svg" width=48 height=28 alt="" uk-svg></center> -->
-                <h5 class="uk-text-center uk-text-bold"> Nabilah Ridhanti Zikra</h5>
-                <span class="uk-text-center"> 20 year, padang</span>
-                <div class="uk-grid-small uk-grid-match uk-margin-small" uk-grid>
-                	<div class="uk-align-left">
-	                	<h6>Blood</h6>
-	                	<span class="uk-text-bold">0+</span>
-                	</div>
-                	<div class="">
-	                	<h6>Height</h6>
-	                	<span class="uk-text-bold">160cm</span>
-                	</div>
-                	<!-- <div class="">
-	                	<h6>Weight</h6>
-	                	<span class="uk-text-bold">60kg</span>
-                	</div> -->
-                </div>
-            </div>
-            <br>
-            <h5 class="uk-align-left">Notification</h5>
-            <div id="dash-card" class="uk-card uk-card-default uk-margin-small uk-card-body ">
-                <!-- <center><img src=""> src="images/smart-care-logo.svg" width=48 height=28 alt="" uk-svg></center> -->
-                <h5 class="uk-text-left uk-text-bold">
-                    Reminder
-                </h5>
-                <span class="uk-text-left">
-                    check your blood Preasure today
-                </span>
-                
-                <hr>
-		        <div>
-		            <div class="uk-grid-small uk-grid-match uk-margin-small" uk-grid>
-		                <!-- <img src="images/smart-care-logo.svg" width=48 height=28 alt="" uk-svg> -->
-			            <h6>Daftar Pasien</h6>
-		            </div>
-                </div>
-            </div>
-        </div>
-      	</div>
-
-      	<div>
-            <div id="countainer" class="uk-card uk-card-default uk-card-body ">
+		  </nav>
+		 <div id="dash-box" class="">
+        	<div id="dashboard">
+	            <div id="dash-card" class="uk-card uk-card-default uk-card-body ">
+	                <!-- <center><img src=""> src="images/smart-care-logo.svg" width=48 height=28 alt="" uk-svg></center> -->
+	                <h5 class="uk-text-center uk-text-bold"> Nabilah Ridhanti Zikra</h5>
+	                <span class="uk-text-center"> 20 year, padang</span>
+	                <div class="uk-grid-small uk-grid-match uk-margin-remove-right" uk-grid>
+	                	<div class="uk-align-left">
+		                	<h6>Blood</h6>
+		                	<span class="uk-text-bold">0+</span>
+	                	</div>
+	                	<div class="">
+		                	<h6>Height</h6>
+		                	<span class="uk-text-bold">160cm</span>
+	                	</div>
+	                	<!-- <div class="">
+		                	<h6>Weight</h6>
+		                	<span class="uk-text-bold">60kg</span>
+	                	</div> -->
+	                </div>
+	            </div>
+	            <br>
+	            <br>
+	            <h3 class="uk-align-left">Notification</h3><br><br>
+	            <div id="dash-card" class="uk-card uk-card-default uk-margin-remove-right uk-card-body " uk-grid>
+	                <!-- <center><img src=""> src="images/smart-care-logo.svg" width=48 height=28 alt="" uk-svg></center> -->
+	                <h5 class="uk-text-left uk-text-bold">
+	                    Reminder
+	                </h5>
+	                <span class="uk-text-left">
+	                    check your blood Preasure today
+	                </span>
+	                <hr>
+			       
+			            <div class="uk-grid-small uk-grid-match uk-margin-small" uk-grid>
+			                <!-- <img src="images/smart-care-logo.svg" width=48 height=28 alt="" uk-svg> -->
+				            <a href="inputDataView">Daftar Pasien</a></h6>
+			            </div>
+			    </div>
+			
+			
+            <div id="countainer" class="uk-card uk-card-default uk-card-body" uk-grid>
              	<h5 class="uk-text-bold">Examination</h5>
              	 <!-- <div class="uk-grid-small uk-grid-match uk-margin-small" uk-grid>
                 	<div class="uk-align-left">
@@ -88,6 +89,7 @@
              	<h5 class="uk-text-bold">Today Blood Preasure</h5>
             </div>
         </div>
-        
+        </div>
+        </section>
 	</body>
 </html>

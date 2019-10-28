@@ -15,6 +15,7 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
 Route::get('/register', function () {
     return view('register');
 });
@@ -26,4 +27,9 @@ Route::get('/dashboard', function () {
 });
 
 Route::get('/firebase','FirebaseController@index');
+
+Route::get('/form-diagnose', function () {
+    return view('inputData');
+});
+
 

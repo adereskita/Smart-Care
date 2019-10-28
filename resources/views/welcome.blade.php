@@ -41,11 +41,11 @@
                     <li class="uk-nav"><a style="color:#ffffff" href="#contact-head" uk-scroll>Contact Us</a></li>
                 </ul>
                 <div class="uk-navbar-item uk-visible@m">
-                    <a id="login" class="uk-button uk-button-default tm-button-default uk-icon uk-text-light" 
+                    <a id="login" class="uk-button uk-button-default tm-button-default uk-icon uk-text-light"
                     style="color:#ffffff; border-radius:15px " href="/login">Login</a>
                 </div>
             </div>
-         </div> 
+         </div>
 <!-- sticky navbar -->
     </div>
 
@@ -63,7 +63,7 @@
                     <p class="uk-margin-small-top uk-margin-large-left uk-text-light" style="color:#ffffff; font-size:14pt">
                     with smart care.
                     </p>
-                    <a id="sign-in" class="uk-text-light uk-button uk-button-default tm-button-default uk-icon uk-margin-large-left" 
+                    <a id="sign-in" class="uk-text-light uk-button uk-button-default tm-button-default uk-icon uk-margin-large-left"
                             style="color:#ffffff; border-radius:15px " href="/register">
                             Sign up
                     </a>
@@ -72,7 +72,7 @@
         <div id="heading-img" class="uk-position-right uk-margin-large-right">
             <img id="heading-image" class="uk-margin-large-right uk-margin-medium-top uk-animation-slide-top-small" src="images/undraw_medicine_home.svg" width=520 height=520 alt="" uk-svg>
         </div>
-        
+
 <!-- card view -->
     <div class="uk-child-width-1-3@m uk-child-width-expand@s uk-grid-large uk-grid-match uk-margin-small-left uk-margin-xlarge-top" uk-grid>
         <div id="card-items" class="uk-margin-large-top">
@@ -85,7 +85,7 @@
                     <p class="uk-text-muted uk-margin-small-top uk-align-center uk-text-center">
                         We take good care of you
                     </p>
-                </div>    
+                </div>
             </div>
         </div>
         <div id="card-items" class="uk-margin-large-top">
@@ -134,6 +134,7 @@
                 <p class="uk-margin-top uk-text-lead uk-text-light">Check Your Blood Pressure Anytime</p>
                 <p class="uk-margin-top uk-text-lead uk-text-light">Send Your Health Record to Doctor</p>
                 <p class="uk-margin-top uk-text-lead uk-text-light">Diagnose Your Symptomps Automaticaly</p>
+
             </div>
         </div>
     </div>
@@ -143,13 +144,13 @@
             About Us
         </p>
         </span>
-        
+
         <div id="about-container" class="uk-container uk-height-medium">
             <img class="uk-align-left uk-margin-xlarge-left uk-margin-small-top" src="images/smart-care-logo.svg" width=160 height=160 alt="">
             <p id="about-text" class="uk-text-lead uk-text-light uk-text-justify uk-padding-small uk-margin-meidum-top">
-            A web application that can make it easy to check blood pressure. 
-            With health records, you can easily stay on track. 
-            You also can send the record to the doctor.    
+            A web application that can make it easy to check blood pressure.
+            With health records, you can easily stay on track.
+            You also can send the record to the doctor.
             </p>
         </div>
     </div>
@@ -171,7 +172,7 @@
                 +6281959621425
             </p>
         </div>
-        
+
     </div>
     <footer class="uk-margin-medium-top uk-text-center">
         Copyright, Smart Care 2019
