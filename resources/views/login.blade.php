@@ -16,7 +16,7 @@
 
         <!-- Fonts -->
         <!-- <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet"> -->
-        
+
 
     </head>
 <body>
@@ -55,15 +55,15 @@
                             forgot your password?
                         </a>
                     </div>
-                        
+
                     <button id="btn-log" class="uk-button uk-button-primary uk-width-1-3 uk-padding-remove uk-align-center uk-margin-small">Login</button>
-                        
+
                 </fieldset>
             </form>
         </div>
             <div id="right-card" class="uk-position-right uk-flex uk-flex-center uk-flex-middle uk-flex-wrap">
                 <div id="color-overlay">
-                    
+
                     <h2 class="uk-text-center uk-text-bold uk-margin-xlarge-top">
                         Hello !
                     </h2>
@@ -79,7 +79,7 @@
             </div>
         <!-- </div> -->
     </div>
-    
+
     <!-- uikit js -->
     <script src="{{ mix('js/app.js') }}"></script>
 </body>

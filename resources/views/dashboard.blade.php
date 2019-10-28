@@ -21,7 +21,7 @@
 	  <nav class="uk-margin-remove-bottom">
 		    <ul>
 		      <li><img class="" src="images/smart-care-logo.png" width=30 height=30 alt="" uk-svg><br>
-		      		<a href="dashboardView">Dashboard</a></li>
+		      		<a href="./dashboard">Dashboard</a></li>
 		      <li><img class="" src="images/smart-care-logo.png" width=30 height=30 alt="" uk-svg><br>
 		      		<a href="#">History</a></li>
 		      <li><img class="" src="images/smart-care-logo.png" width=30 height=30 alt="" uk-svg><br>
@@ -61,14 +61,14 @@
 	                    check your blood Preasure today
 	                </span>
 	                <hr>
-			       
+
 			            <div class="uk-grid-small uk-grid-match uk-margin-small" uk-grid>
 			                <!-- <img src="images/smart-care-logo.svg" width=48 height=28 alt="" uk-svg> -->
 				            <a href="inputDataView">Daftar Pasien</a></h6>
 			            </div>
 			    </div>
-			
-			
+
+
             <div id="countainer" class="uk-card uk-card-default uk-card-body" uk-grid>
              	<h5 class="uk-text-bold">Examination</h5>
              	 <!-- <div class="uk-grid-small uk-grid-match uk-margin-small" uk-grid>
