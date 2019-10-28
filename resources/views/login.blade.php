@@ -34,7 +34,8 @@
             <h3 id="signup-text" class="uk-card-title uk-margin-medium-top uk-margin-medium-left uk-margin-remove-bottom">
                 Login
             </h3>
-            <form action="" method="">
+            <form action="/login/success" method="POST">
+                @csrf
                 <fieldset id="field-form" class="uk-fieldset uk-width-large uk-padding">
                     <!-- EMAIL -->
                     <div class="uk-margin">

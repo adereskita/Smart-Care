@@ -16,7 +16,7 @@
 
         <!-- Fonts -->
         <!-- <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet"> -->
-        
+
 
     </head>
 <body>
@@ -33,7 +33,8 @@
             <h3 id="signup-text" class="uk-card-title uk-margin-medium-top uk-text-center uk-margin-remove-bottom">
                 Create Account
             </h3>
-            <form action="" method="">
+            <form action="/register/success" method="POST">
+                @csrf
                 <fieldset id="field-form" class="uk-fieldset uk-width-large uk-padding">
                     <!-- NAMA -->
                     <div class="uk-margin">
@@ -58,7 +59,7 @@
                     </div>
                     <button id="btn-log" class="uk-button uk-button-primary uk-width-1-3 uk-padding-remove uk-align-center uk-margin-small">Sign Up</button>
                         <p class="uk-text-light uk-text-center">
-                            By clicking "Sign up" you are agree with our 
+                            By clicking "Sign up" you are agree with our
                             <a href="">Terms & Condition</a>
                         </p>
                 </fieldset>
@@ -66,7 +67,7 @@
         </div>
             <div id="right-card" class="uk-position-right uk-flex uk-flex-center uk-flex-middle uk-flex-wrap">
                 <div id="color-overlay">
-                    
+
                     <h2 class="uk-text-center uk-text-bold uk-margin-xlarge-top">
                         Welcome Back!
                     </h2>
@@ -82,7 +83,7 @@
             </div>
         <!-- </div> -->
     </div>
-    
+
     <!-- uikit js -->
     <script src="{{ mix('js/app.js') }}"></script>
 </body>

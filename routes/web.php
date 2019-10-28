@@ -10,12 +10,19 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
+Route::group(['middleware' => 'checkdoctors'], function () {
+    Route::post('/login/success', 'LoginController@login');
+    Route::post('/register/success', 'RegisterController@register');
+});
+
+
+
+
 
 //VIEW ROUTE
 Route::get('/', function () {
     return view('welcome');
 });
-
 Route::get('/register', function () {
     return view('register');
 });
@@ -26,10 +33,9 @@ Route::get('/dashboard', function () {
     return view('dashboard');
 });
 
-Route::get('/firebase','FirebaseController@index');
-
-Route::get('/form-diagnose', function () {
+Route::get('/inputDataView', function () {
     return view('inputData');
 });
 
+Route::get('/firebase','FirebaseController@index');
 
