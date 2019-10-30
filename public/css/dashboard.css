@@ -1,5 +1,5 @@
-body{
-   background-color: #f7f7f7 ;
+html{
+   background-color: #F8FAFC ;
     width: 100%;
  
 }
@@ -75,5 +75,15 @@ img{
   background-color: #ffffff;
   padding: 2%;
   border-radius: 3%;
+  margin: 2%;
+}
+
+#viewPasien{
+	flex: 8;
+  width: 75%;
+  background-color: #ffffff;
+  padding: 2%;
+  border:1%;
+  border-radius: 4%;
   margin: 2%;
 }
