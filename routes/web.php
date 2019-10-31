@@ -11,12 +11,11 @@
 |
 */
 Route::group(['middleware' => 'checkdoctors'], function () {
-    Route::post('/login/success', 'LoginController@login');
-    Route::post('/register/success', 'RegisterController@register');
+    Route::get('/dashboard','DashboardController@index');
 });
 
-
-
+Route::post('/register/success', 'RegisterController@register');
+Route::post('/login/success', 'LoginController@login');
 
 
 //VIEW ROUTE
@@ -28,9 +27,6 @@ Route::get('/register', function () {
 });
 Route::get('/login', function () {
     return view('login');
-});
-Route::get('/dashboard', function () {
-    return view('dashboard');
 });
 
 Route::get('/inputDataView', function () {

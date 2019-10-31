@@ -21,10 +21,10 @@
     </head>
 <body>
     <!-- ALERT -->
-    @if (session('alert'))
+    @if (session()->has('error'))
     <div class="uk-alert-danger" uk-alert>
         <a class="uk-alert-close" uk-close></a>
-        <p>{{ session('alert') }}</p>
+        <p>{{ session()->get('error') }}</p>
     </div>
     @endif
 
@@ -34,8 +34,8 @@
             <h3 id="signup-text" class="uk-card-title uk-margin-medium-top uk-margin-medium-left uk-margin-remove-bottom">
                 Login
             </h3>
-            <form action="/login/success" method="POST">
-                @csrf
+            <form action="./login/success" method="POST">
+                {{ csrf_field() }}
                 <fieldset id="field-form" class="uk-fieldset uk-width-large uk-padding">
                     <!-- EMAIL -->
                     <div class="uk-margin">

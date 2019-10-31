@@ -20,10 +20,10 @@
 
     </head>
 <body>
-    @if (session('alert'))
+    @if (session('error'))
     <div class="uk-alert-danger" uk-alert>
         <a class="uk-alert-close" uk-close></a>
-        <p>{{ session('alert') }}</p>
+        <p>{{ session('error') }}</p>
     </div>
     @endif
 
@@ -33,8 +33,8 @@
             <h3 id="signup-text" class="uk-card-title uk-margin-medium-top uk-text-center uk-margin-remove-bottom">
                 Create Account
             </h3>
-            <form action="/register/success" method="POST">
-                @csrf
+            <form action="./register/success" method="POST">
+                {{ csrf_field() }}
                 <fieldset id="field-form" class="uk-fieldset uk-width-large uk-padding">
                     <!-- NAMA -->
                     <div class="uk-margin">
