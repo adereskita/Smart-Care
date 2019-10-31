@@ -1,5 +1,4 @@
 <?php
-
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -29,9 +28,13 @@ Route::get('/login', function () {
     return view('login');
 });
 
-Route::get('/inputDataView', function () {
-    return view('inputData');
-});
+
+
+Route::get('/createData', 'PatiensController@create');
+
+Route::get('/viewDataPasien', 'PatiensController@index');
+
+Route::post('/createData/created', 'PatiensController@created' );
 
 Route::get('/firebase','FirebaseController@index');
 

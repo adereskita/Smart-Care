@@ -1,7 +1,7 @@
-body{
-   background-color: #f7f7f7 ;
+html{
+   background-color: #F8FAFC ;
     width: 100%;
- 
+
 }
 @media (max-width: 600px) {
   section {
@@ -41,7 +41,7 @@ li{
 	margin: 3%;
 }
 #dash-box{
-	/*margin-top: -45%;*/ 
+	/*margin-top: -45%;*/
 	flex: 8;
 	width: 80%;
 
@@ -49,17 +49,14 @@ li{
 p{
 	font-size: 14px;
 }
-img{
-	
-}
 #dash-card{
 	width: 30%;
 	border-radius: 14%;
-	
+
 }
 #countainer{
 	/*margin-top: -46%;*/
-	
+
 	/*width: 67%;*/
 	-webkit-flex:5;
 	margin-left: 29%;
@@ -75,5 +72,15 @@ img{
   background-color: #ffffff;
   padding: 2%;
   border-radius: 3%;
+  margin: 2%;
+}
+
+#viewPasien{
+	flex: 8;
+  width: 75%;
+  background-color: #ffffff;
+  padding: 2%;
+  border:1%;
+  border-radius: 4%;
   margin: 2%;
 }

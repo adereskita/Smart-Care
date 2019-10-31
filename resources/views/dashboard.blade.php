@@ -64,7 +64,7 @@
 
 			            <div class="uk-grid-small uk-grid-match uk-margin-small" uk-grid>
 			                <!-- <img src="images/smart-care-logo.svg" width=48 height=28 alt="" uk-svg> -->
-				            <a href="inputDataView">Daftar Pasien</a></h6>
+				            <a href="/createData">Daftar Pasien</a></h6>
 			            </div>
 			    </div>
 

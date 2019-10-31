@@ -31,67 +31,64 @@
     </ul>
   </nav>
   </div>
-<form id="form-input" class="uk-form-horizontal">
-	<h3>Input Data Pasien</h3>
+<form id="form-input" action="./createData/created" method="POST" class="uk-form-horizontal">
+	<h3>Input Data Pasien</h3><br>
+    {{csrf_field()}}
     <div class="uk-margin">
         <label class="uk-form-label" for="form-horizontal-text">Nama Pasien</label>
         <div class="uk-form-controls">
-            <input class="uk-input" id="form-horizontal-text" type="text" placeholder="Your Name">
+            <input name="name" class="uk-input" id="form-horizontal-text" type="text" placeholder="">
         </div>
     </div>
      <div class="uk-margin">
         <label class="uk-form-label" for="form-horizontal-text">Tempat Lahir</label>
         <div class="uk-form-controls">
-            <input class="uk-input" id="form-horizontal-text" type="text" placeholder="Some text...">
+            <input name="place_of_birth" class="uk-input" id="form-horizontal-text" type="text" placeholder="">
         </div>
     </div>
     <div class="uk-margin">
         <label class="uk-form-label" for="form-horizontal-text">Tanggal Lahir</label>
         <div class="uk-form-controls">
-            <input class="uk-input" id="form-horizontal-text" type="text" placeholder="Some text...">
+            <input name="date_of_birth" class="uk-input" id="form-horizontal-text" type="text" placeholder="">
         </div>
     </div>
-	 <div class="uk-margin">
-        <label class="uk-form-label" for="form-horizontal-text">Tinggi Badan</label>
-        <div class="uk-form-controls">
-            <input class="uk-input" id="form-horizontal-text" type="text" placeholder="Some text...">
+    <div class="uk-margin">
+        <div class="uk-form-label">Jenis Kelamin</div>
+        <div name="gender" class="uk-form-controls uk-form-controls-text">
+            <label><input class="uk-radio" id="pria" type="radio" name="gender"> Laki - Laki </label>
+            <label><input class="uk-radio" id="wanita" type="radio" name="gender"> Perempuan </label>
         </div>
     </div>
-     <div class="uk-margin">
-        <label class="uk-form-label" for="form-horizontal-text">Berat Badan</label>
+    <div class="uk-margin">
+        <label class="uk-form-label" for="form-horizontal-text">Alamat</label>
         <div class="uk-form-controls">
-            <input class="uk-input" id="form-horizontal-text" type="text" placeholder="Some text...">
+            <textarea name="address" class="uk-textarea" rows="5" placeholder=""></textarea>
+        </div>
+    </div>
+    <div class="uk-margin">
+        <label class="uk-form-label" for="form-horizontal-text">Riwayat Penyakit</label>
+        <div class="uk-form-controls">
+            <textarea name="history_of_disease" class="uk-textarea" rows="5" placeholder=""></textarea>
         </div>
     </div>
      <div class="uk-margin">
         <label class="uk-form-label" for="form-horizontal-text">Sistol</label>
         <div class="uk-form-controls">
-            <input class="uk-input" id="form-horizontal-text" type="text" placeholder="Some text...">
+            <input name="sistol" class="uk-input" id="form-horizontal-text" type="text" placeholder="">
         </div>
     </div>
      <div class="uk-margin">
         <label class="uk-form-label" for="form-horizontal-text">Diostol</label>
         <div class="uk-form-controls">
-            <input class="uk-input" id="form-horizontal-text" type="text" placeholder="Some text...">
+            <input name="diestol" class="uk-input" id="form-horizontal-text" type="text" placeholder="">
         </div>
     </div>
-    <div class="uk-margin">
-        <label class="uk-form-label" for="form-horizontal-select">Select</label>
-        <div class="uk-form-controls">
-            <select class="uk-select" id="form-horizontal-select">
-                <option>Option 01</option>
-                <option>Option 02</option>
-            </select>
-        </div>
-    </div>
+    <p uk-margin>
+        <button class="uk-button uk-button-primary" style="float: right;">Submit</button>
+        <button class="uk-button uk-button-danger" style="float: right;">Previous</button>
+    </p>
 
-    <div class="uk-margin">
-        <div class="uk-form-label">Radio</div>
-        <div class="uk-form-controls uk-form-controls-text">
-            <label><input class="uk-radio" type="radio" name="radio1"> Option 01</label>
-            <label><input class="uk-radio" type="radio" name="radio1"> Option 02</label>
-        </div>
-    </div>
+    
 
 </form>
 </section>
