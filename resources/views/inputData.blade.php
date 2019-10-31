@@ -55,8 +55,8 @@
     <div class="uk-margin">
         <div class="uk-form-label">Jenis Kelamin</div>
         <div name="gender" class="uk-form-controls uk-form-controls-text">
-            <label><input class="uk-radio" id="pria" type="radio" name="gender"> Laki - Laki </label>
-            <label><input class="uk-radio" id="wanita" type="radio" name="gender"> Perempuan </label>
+            <label><input class="uk-radio" value="pria" type="radio" name="gender"> Laki - Laki </label>
+            <label><input class="uk-radio" value="wanita" type="radio" name="gender"> Perempuan </label>
         </div>
     </div>
     <div class="uk-margin">
@@ -88,7 +88,7 @@
         <button class="uk-button uk-button-danger" style="float: right;">Previous</button>
     </p>
 
-    
+
 
 </form>
 </section>
