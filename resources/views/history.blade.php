@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-        <title>View Data Pasien</title>
+        <title>History | Smart Care</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
        <link href="{{ mix('css/app.css') }}" rel="stylesheet">
         <link rel="stylesheet" href="css/dashboard.css">

@@ -4,6 +4,12 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Session;
+use App\Patients;
+
+use Kreait\Firebase;
+use Kreait\Firebase\Factory;
+use Kreait\Firebase\ServiceAccount;
+use Kreait\Firebase\Database;
 
 class DashboardController extends Controller
 {
@@ -21,21 +27,33 @@ class DashboardController extends Controller
 
     public function history()
 	{
-		$data_patient = \App\Patients::all();
+        $data_patient = Patients::all();
+
 		return view('history',['data_patient' => $data_patient]);
     }
 
     public function create()
 	{
-		$data_patient = \App\Patients::all();
-    	return view('inputData');
+        $serviceAccount = ServiceAccount::fromJsonFile(__DIR__.'/FirebaseKey.json');
+        $firebase = (new Factory)
+            ->withServiceAccount($serviceAccount)
+            ->create();
+        $database = $firebase->getDatabase();
+        $ref = $database
+        ->getReference('Tensimeter/sistol');
+        $ref1 = $database
+        ->getReference('Tensimeter/diastol');
+
+        $sistol = $ref->getValue();
+        $diastol = $ref1->getValue();
+
+        // return view('inputData')->with('values', $data);
+    	return view('inputData',['sistol' => $sistol, 'diastol' => $diastol ]);
     }
 
     public function created(Request $request)
 	{
-		\App\Patients::create($request->all());
-		// $data_patient = \App\Patients::all();
-		// return $request->all();
+		Patients::create($request->all());
     	return redirect('/dashboard');
     }
 }

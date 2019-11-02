@@ -16,7 +16,7 @@ class CreatePatientsTable extends Migration
             $table->bigIncrements('id');
             $table->string("name");
             $table->string("place_of_birth");
-            $table->string("date_of_birth");
+            $table->date("date_of_birth");
             $table->string("gender");
             $table->text("address");
             $table->text("history_of_disease")->nullable();
