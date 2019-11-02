@@ -9,14 +9,33 @@ class DashboardController extends Controller
 {
     public function index(Request $request)
     {
-        if(!Session::get('login')){
+        // !Session::get('login')
+        if($request->session()->has('name') == null){
             return redirect('/login')->with('error','Kamu harus login dulu');
 
-        }elseif($request->session()->has('nama')){
-			echo $request->session()->get('nama');
-		}else{
-			echo 'Tidak ada data dalam session.';
+        }else{
+            echo $request->session()->get('name');
+            return view('/dashboard');
 		}
-        return view('/dashboard');
+    }
+
+    public function history()
+	{
+		$data_patient = \App\Patients::all();
+		return view('history',['data_patient' => $data_patient]);
+    }
+
+    public function create()
+	{
+		$data_patient = \App\Patients::all();
+    	return view('inputData');
+    }
+
+    public function created(Request $request)
+	{
+		\App\Patients::create($request->all());
+		// $data_patient = \App\Patients::all();
+		// return $request->all();
+    	return redirect('/dashboard');
     }
 }

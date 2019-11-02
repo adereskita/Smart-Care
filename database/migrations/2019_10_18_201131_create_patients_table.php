@@ -19,9 +19,9 @@ class CreatePatientsTable extends Migration
             $table->string("date_of_birth");
             $table->string("gender");
             $table->text("address");
-            $table->text("history_of_disease");
+            $table->text("history_of_disease")->nullable();
             $table->string("sistol");
-            $table->string("diastol")->nullable();
+            $table->string("diastol");
             $table->timestamps();
         });
     }

@@ -9,6 +9,8 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
+Use App\Http\Middleware\checkdoctors;
+
 Route::group(['middleware' => 'checkdoctors'], function () {
     Route::get('/dashboard','DashboardController@index');
 });
@@ -30,11 +32,11 @@ Route::get('/login', function () {
 
 
 
-Route::get('/createData', 'PatiensController@create');
+Route::get('/createData', 'DashboardController@create');
 
-Route::get('/viewDataPasien', 'PatiensController@index');
+Route::get('/history', 'DashboardController@history');
 
-Route::post('/createData/created', 'PatiensController@created' );
+Route::post('/createData/created', 'DashboardController@created' );
 
 Route::get('/firebase','FirebaseController@index');
 

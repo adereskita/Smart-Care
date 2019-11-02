@@ -23,9 +23,9 @@
 		      <li><img class="" src="images/smart-care-logo.png" width=30 height=30 alt="" uk-svg><br>
 		      		<a href="./dashboard">Dashboard</a></li>
 		      <li><img class="" src="images/smart-care-logo.png" width=30 height=30 alt="" uk-svg><br>
-		      		<a href="#">History</a></li>
+		      		<a href="./history">History</a></li>
 		      <li><img class="" src="images/smart-care-logo.png" width=30 height=30 alt="" uk-svg><br>
-		      		<a href="#">Profile</a></li>
+		      		<a href="./profile">Profile</a></li>
 		    </ul>
 		  </nav>
 		 <div id="dash-box" class="">
