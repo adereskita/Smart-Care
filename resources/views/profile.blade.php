@@ -6,7 +6,7 @@
 	    <meta name="viewport" content="width=device-width, initial-scale=1">
 		<meta name="csrf-token" content="{{ csrf_token() }}">
 
-        <title>Input | Smart Care</title>
+        <title>Profile | Smart Care</title>
 
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
@@ -38,77 +38,58 @@
                 </div>
             </a>
             <a class="uk-link-heading" href="./profile">
-                <div class="uk-padding-small uk-text-justify uk-text-bold uk-margin-left">
+                <div class="uk-padding-small uk-text-justify uk-text-bold uk-margin-left" style="border-right: solid #6BAFB1">
                     <span uk-icon="icon: user; ratio: 1"></span>
                     <span class="uk-margin-small-left">Profile</span>
                 </div>
             </a>
         </div>
     </nav>
+@foreach ($doctor as $item)
 <form id="form-input" action="./createData/created" method="POST" class="uk-form-horizontal uk-align-center">
-	<h3>Input Data Pasien</h3><br>
+	<h3>Docter Profile</h3><br>
     {{csrf_field()}}
     <div class="uk-margin uk-width-2-3">
-        <label class="uk-form-label" for="form-horizontal-text">Nama Pasien</label>
+        <label class="uk-form-label" for="form-horizontal-text">Your Name</label>
         <div class="uk-form-controls">
-            <input name="name" class="uk-input" id="form-horizontal-text" type="text" placeholder="">
+        <input name="name" class="uk-input" id="form-horizontal-text" type="text" value="{{$item->name}}">
         </div>
     </div>
      <div class="uk-margin uk-width-2-3"">
-        <label class="uk-form-label" for="form-horizontal-text">Tempat Lahir</label>
+        <label class="uk-form-label" for="form-horizontal-text">Docter ID</label>
         <div class="uk-form-controls">
-            <input name="place_of_birth" class="uk-input" id="form-horizontal-text" type="text" placeholder="">
+        <input name="place_of_birth" class="uk-input" id="form-horizontal-text" type="text" value="{{$item->docId}}" disabled>
         </div>
     </div>
     <div class="uk-margin uk-width-2-3"">
-        <label class="uk-form-label" for="form-horizontal-text">Tanggal Lahir</label>
+        <label class="uk-form-label" for="form-horizontal-text">Email</label>
         <div class="uk-form-controls">
-            <input name="date_of_birth" class="uk-input" id="form-horizontal-text" type="date" placeholder="">
+        <input name="date_of_birth" class="uk-input" id="form-horizontal-text" type="text" value="{{$item->email}}" disabled>
         </div>
     </div>
-    <div class="uk-margin uk-width-2-3"">
-        <div class="uk-form-label">Jenis Kelamin</div>
-        <div name="gender" class="uk-form-controls uk-form-controls-text">
-            <label><input class="uk-radio" value="pria" type="radio" name="gender"> Laki - Laki </label>
-            <label><input class="uk-radio" value="wanita" type="radio" name="gender"> Perempuan </label>
-        </div>
-    </div>
+
     <div class="uk-margin uk-width-2-3"">
         <label class="uk-form-label" for="form-horizontal-text">Alamat</label>
         <div class="uk-form-controls">
-            <textarea name="address" class="uk-textarea" rows="5" placeholder=""></textarea>
+            <textarea name="address" class="uk-textarea" rows="5"></textarea>
         </div>
     </div>
     <div class="uk-margin uk-width-2-3"">
-        <label class="uk-form-label" for="form-horizontal-text">Riwayat Penyakit</label>
-        <div class="uk-form-controls">
-            <textarea name="history_of_disease" class="uk-textarea" rows="5" placeholder=""></textarea>
-        </div>
-    </div>
-@foreach ($sistol as $data)
-     <div class="uk-margin uk-width-2-3"">
-        <label class="uk-form-label" for="form-horizontal-text">Sistol</label>
-        <div class="uk-form-controls">
-            <input name="sistol" class="uk-input" id="form-horizontal-text" type="text" value="{{$data}}">
-        </div>
-@endforeach
-    </div>
-@foreach ($diastol as $data)
-     <div class="uk-margin uk-width-2-3"">
-        <label class="uk-form-label" for="form-horizontal-text">Diastol</label>
-        <div class="uk-form-controls">
-            <input name="diastol" class="uk-input" id="form-horizontal-text" type="text" value="{{$data}}">
-        </div>
-@endforeach
+        <label class="uk-form-label" for="form-horizontal-text">Joined at</label>
+        <p class="uk-margin-left uk-text-muted">
+            {{$item->created_at}}
+        </p>
     </div>
     <div class="uk-margin">
-        <button class="uk-button uk-button-primary uk-width-1-2 uk-align-center uk-margin">Submit</button>
+        <a href="./profile/updated" class="uk-button uk-button-primary uk-width-1-5 uk-align-center uk-margin">
+            Update
+        </a>
     </div>
 </form>
+@endforeach
 </section>
 
 <script src="{{ mix('js/app.js') }}"></script>
-
 
 </body>
 </html>

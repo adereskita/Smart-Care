@@ -18,6 +18,8 @@ Route::group(['middleware' => 'checkdoctors'], function () {
 Route::post('/register/success', 'RegisterController@register');
 Route::post('/login/success', 'LoginController@login');
 
+Route::get('/logout', 'LoginController@logout');
+
 
 //VIEW ROUTE
 Route::get('/', function () {
@@ -38,5 +40,8 @@ Route::get('/history', 'DashboardController@history');
 
 Route::post('/createData/created', 'DashboardController@created' );
 
-Route::get('/firebase','FirebaseController@index');
+// Route::get('/firebase','FirebaseController@index');
+
+Route::get('/profile', 'DashboardController@profile');
+
 

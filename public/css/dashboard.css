@@ -1,63 +1,74 @@
 html{
-   background-color: #F8FAFC ;
+    background-color: #F8FAFC ;
     width: 100%;
+    font-family: 'Open Sans', sans-serif;
 
 }
-@media (max-width: 600px) {
+/* @media (max-width: 600px) {
   section {
     -webkit-flex-direction: column;
     flex-direction: column;
   }
-}
+} */
 section {
   display: -webkit-flex;
   display: flex;
 }
-nav {
-  flex: 1;
-  width: 25%;
+
+#navbar{
+    background: #ffffff;
+}
+
+#dash-card h4{
+    color: #EE6876;
 }
 
 /* Style the list inside the menu */
-nav ul {
-  list-style-type: none;
-  padding: 1%;
- background-image: linear-gradient(#6BAFB1, #B2DCDF, #F9F5FC);
-  position: fixed;
-}
-nav li{
-	text-align: center;
-	padding: 8px 16px;
-  	text-decoration: none;
-}
-
-li{
-	margin-top: 100%;
-	margin-bottom: 100%;
-}
-#dashboard{
+/* #dashboard{
 	flex: 9;
 	width: 80%;
 	margin: 3%;
-}
-#dash-box{
+} */
+#container{
 	/*margin-top: -45%;*/
-	flex: 8;
-	width: 80%;
+	/* flex: 8; */
+	width: 100%;
 
 }
+
+#recent{
+    font-family: 'Open Sans', sans-serif;
+    border-radius: 20px;
+    background-color: #ffffff;
+}
+
 p{
 	font-size: 14px;
 }
+
 #dash-card{
-	width: 30%;
-	border-radius: 14%;
+    font-family: 'Open Sans', sans-serif;
+    border-radius: 20px;
+    background-color: #F8E5E9;
+}
+
+#chart{
+    font-family: 'Open Sans', sans-serif;
+    border-radius: 20px;
+    background-color: #ffffff;
+}
+
+#dashboard-img{
+    position: absolute;
+    right: 300px;
+}
+
+#dash-card h4, span{
+    font-family: 'Open Sans', sans-serif;
 
 }
-#countainer{
-	/*margin-top: -46%;*/
 
-	/*width: 67%;*/
+#countainer{
 	-webkit-flex:5;
 	margin-left: 29%;
 	flex: 4;
@@ -75,11 +86,28 @@ p{
 }
 
 #viewPasien{
-	flex: 8;
-  width: 75%;
   background-color: #ffffff;
-  padding: 2%;
-  border:1%;
-  border-radius: 4%;
-  margin: 2%;
+  padding: 20px;
+  margin: 30px;
+  height: 600px;
+}
+
+@media (max-width:1180px) {
+    #dash-card{
+        width: 90%;
+    }
+    #dashboard-img{
+        right: 200px;
+        width: 220px;
+        height: 220px;
+    }
+}
+
+@media (max-width:960px) {
+    #dashboard-img{
+        display: none;
+    }
+    #dash-card p{
+        font-size: 14pt;
+    }
 }

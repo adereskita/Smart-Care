@@ -22,6 +22,7 @@ class CreatePatientsTable extends Migration
             $table->text("history_of_disease")->nullable();
             $table->string("sistol");
             $table->string("diastol");
+            $table->string("status");
             $table->timestamps();
         });
     }
