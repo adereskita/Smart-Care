@@ -17,6 +17,7 @@ class CreateDoctorsTable extends Migration
             $table->bigIncrements('id');
             $table->string('name');
             $table->string('docId');
+            $table->string('department_name')->nullable();
             $table->string('phone')->nullable();
             $table->string('email')->unique();
             $table->string('password');

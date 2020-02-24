@@ -46,7 +46,7 @@
         </div>
     </nav>
 @foreach ($doctor as $item)
-<form id="form-input" action="./createData/created" method="POST" class="uk-form-horizontal uk-align-center">
+<form id="form-input" action="./profile/updated" method="POST" class="uk-form-horizontal uk-align-center">
 	<h3>Docter Profile</h3><br>
     {{csrf_field()}}
     <div class="uk-margin uk-width-2-3">
@@ -69,9 +69,10 @@
     </div>
 
     <div class="uk-margin uk-width-2-3"">
-        <label class="uk-form-label" for="form-horizontal-text">Alamat</label>
+        <label class="uk-form-label" for="form-horizontal-text">Phone Number</label>
         <div class="uk-form-controls">
-            <textarea name="address" class="uk-textarea" rows="5"></textarea>
+        <input name="phone" class="uk-input" id="form-horizontal-text" type="text" value="{{$item->phone}}">
+            {{-- <textarea name="phone" class="uk-textarea" rows="5"></textarea> --}}
         </div>
     </div>
     <div class="uk-margin uk-width-2-3"">
@@ -81,9 +82,9 @@
         </p>
     </div>
     <div class="uk-margin">
-        <a href="./profile/updated" class="uk-button uk-button-primary uk-width-1-5 uk-align-center uk-margin">
-            Update
-        </a>
+        <button type="submit" class="uk-button uk-button-primary uk-width-1-5 uk-align-center uk-margin">
+                Update
+        </button>
     </div>
 </form>
 @endforeach

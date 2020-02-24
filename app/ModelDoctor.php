@@ -18,5 +18,14 @@ class ModelDoctor extends Model
     'phone',
     'email',
     'password',
+    'department_name',
     ];
+
+    public function department(){
+        return $this->hasOne('App\DepartmentModel');
+    }
+
+    public function patients(){
+        return $this->hasMany('App\Patients');
+    }
 }

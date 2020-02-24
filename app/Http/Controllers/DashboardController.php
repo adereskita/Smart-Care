@@ -11,7 +11,7 @@ use Kreait\Firebase;
 use Kreait\Firebase\Factory;
 use Kreait\Firebase\ServiceAccount;
 use Kreait\Firebase\Database;
-use App\Charts\UserChart;
+use App\Charts\DocChart;
 
 
 class DashboardController extends Controller
@@ -27,9 +27,9 @@ class DashboardController extends Controller
             $email = $request->session()->get('email');
             $data = ModelDoctor::where('email',$email)->get();
 
-            $patient = Patients::all()->take(10);
+            $patient = Patients::all()->take(5);
 
-            $docChart = new UserChart;
+            $docChart = new DocChart;
             $docChart->labels(['Jan', 'Feb', 'Mar']);
             $docChart->dataset('Users by trimester', 'line', [10, 25, 13]);
 
@@ -109,7 +109,16 @@ class DashboardController extends Controller
     public function updateProfile(Request $request){
 
         $email = $request->session()->get('email');
-        $data = ModelDoctor::where('email',$email)->get();
+
+        $name = $request->input('name');
+        $phone = $request->input('phone');
+
+        $data = ModelDoctor::where('email',$email)
+        ->update([
+            'name' => $name,
+            'phone' => $phone
+        ]);
+        // ModelDoctor::create($request->all());
 
         return redirect('/profile')->with(['doctor' => $data]);
     }

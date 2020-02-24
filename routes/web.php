@@ -44,4 +44,6 @@ Route::post('/createData/created', 'DashboardController@created' );
 
 Route::get('/profile', 'DashboardController@profile');
 
+Route::post('/profile/updated', 'DashboardController@updateProfile');
+
 
