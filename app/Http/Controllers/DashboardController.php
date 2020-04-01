@@ -12,6 +12,7 @@ use Kreait\Firebase\Factory;
 use Kreait\Firebase\ServiceAccount;
 use Kreait\Firebase\Database;
 use App\Charts\DocChart;
+use Illuminate\Support\Str;
 
 
 class DashboardController extends Controller
@@ -57,6 +58,8 @@ class DashboardController extends Controller
         $ref1 = $database
         ->getReference('Tensimeter/diastol');
 
+        // $random_key = str_random(32);
+
         $sistol = $ref->getValue();
         $diastol = $ref1->getValue();
 
@@ -66,6 +69,13 @@ class DashboardController extends Controller
 
     public function created(Request $request)
 	{
+        $serviceAccount = ServiceAccount::fromJsonFile(__DIR__.'/FirebaseKey.json');
+        $firebase = (new Factory)
+            ->withServiceAccount($serviceAccount)
+            ->create();
+        $database = $firebase->getDatabase();
+        // DATABASE FIREBASE PURPOSE^
+
         $req = new Patients;
 
         $sistol = $request->input('sistol');
@@ -94,6 +104,25 @@ class DashboardController extends Controller
         $req->save();
 
         $name = $request->session()->get('name');
+
+        //push data to database firebase
+        $random_key = Str::random(16);
+        // $refPatient = $database->getReference('Pasien/'.trim($random_key));
+        $refPatient = $database->getReference('Pasien');
+
+        $newPatient = $refPatient
+        ->push([
+        'id_patient' => trim($random_key) ,
+        'nama' => $name ,
+        'tempat_lahir' => $req->place_of_birth ,
+        'tanggal_lahir' => $req->date_of_birth ,
+        'jenis_kelamin' => $req->gender ,
+        'alamat' => $req->address ,
+        'riwayat_penyakit' => $req->history_of_disease ,
+        'sistol' => $req->sistol ,
+        'diastol' => $req->diastol ,
+        ]);
+
         // return redirect('/dashboard')-with('session',$name);
     	return redirect('/dashboard')->with('success', 'Added Patient Complete');
     }
