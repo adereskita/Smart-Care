@@ -66,11 +66,11 @@
                         <th>Jenis Kelamin</th>
                         <th>Alamat</th>
                         <th>Riwayat Penyakit</th>
-                        <th>Departemen</th>
+                        <th>Dokter</th>
                         <th>Sistol</th>
                         <th>Diastol</th>
                         <th>Status</th>
-                        <th>Aksi</th>
+                        <!-- <th>Aksi</th> -->
                     </tr>
                     </thead>
         @foreach($data_patient as $Patients)
@@ -82,16 +82,19 @@
                     <td>{{$Patients->gender}}</td>
                     <td>{{$Patients->address}}</td>
                     <td>{{$Patients->history_of_disease}}</td>
-                    <td>null</td>
+                    <td>{{$Patients->doctor_name}}</td>
                     <td>{{$Patients->sistol}}</td>
                     <td>{{$Patients->diastol}}</td>
                     <td>{{$Patients->status}}</td>
-                    <td>null</td>
+                    <!-- <td>
+                        <button class="uk-button uk-button-danger uk-button-small uk-text-capitalize">Delete</button>
+                    </td> -->
                 </tr>
             </tbody>
         @endforeach
                 </table>
-        {{-- </div> --}}
+        <!-- {{-- </div> --}} -->
+            </div>
         </div>
 </section>
         <script src="{{ mix('js/app.js') }}"></script>

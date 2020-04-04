@@ -13,8 +13,9 @@ class Patients extends Model
         'date_of_birth',
         'gender',
         'address',
+        'description',
         'history_of_disease',
-        'department_name',
+        'doctor_name',
         'sistol',
         'diastol'];
 

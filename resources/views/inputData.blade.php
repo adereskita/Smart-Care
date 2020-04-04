@@ -54,39 +54,56 @@
             <input name="name" class="uk-input" id="form-horizontal-text" type="text" placeholder="">
         </div>
     </div>
-     <div class="uk-margin uk-width-2-3"">
+    <div class="uk-margin uk-width-2-3">
+        <label class="uk-form-label" for="form-horizontal-text">Email</label>
+        <div class="uk-form-controls">
+            <input name="email" class="uk-input" id="form-horizontal-text" type="text" placeholder="">
+        </div>
+    </div>
+     <div class="uk-margin uk-width-2-3">
         <label class="uk-form-label" for="form-horizontal-text">Tempat Lahir</label>
         <div class="uk-form-controls">
             <input name="place_of_birth" class="uk-input" id="form-horizontal-text" type="text" placeholder="">
         </div>
     </div>
-    <div class="uk-margin uk-width-2-3"">
-        <label class="uk-form-label" for="form-horizontal-text">Tanggal Lahir</label>
+    <div class="uk-margin uk-width-2-3">
+        <label class="uk-form-label" for="form-horizontal-text">Tanggal Check Up</label>
         <div class="uk-form-controls">
-            <input name="date_of_birth" class="uk-input" id="form-horizontal-text" type="date" placeholder="">
+            <input name="date" class="uk-input" id="form-horizontal-text" type="date" placeholder="">
         </div>
     </div>
-    <div class="uk-margin uk-width-2-3"">
+    <div class="uk-margin uk-width-2-3">
         <div class="uk-form-label">Jenis Kelamin</div>
         <div name="gender" class="uk-form-controls uk-form-controls-text">
             <label><input class="uk-radio" value="pria" type="radio" name="gender"> Laki - Laki </label>
             <label><input class="uk-radio" value="wanita" type="radio" name="gender"> Perempuan </label>
         </div>
     </div>
-    <div class="uk-margin uk-width-2-3"">
+    <div class="uk-margin uk-width-2-3">
         <label class="uk-form-label" for="form-horizontal-text">Alamat</label>
         <div class="uk-form-controls">
             <textarea name="address" class="uk-textarea" rows="5" placeholder=""></textarea>
         </div>
     </div>
-    <div class="uk-margin uk-width-2-3"">
+    <div class="uk-margin uk-width-2-3">
         <label class="uk-form-label" for="form-horizontal-text">Riwayat Penyakit</label>
         <div class="uk-form-controls">
             <textarea name="history_of_disease" class="uk-textarea" rows="5" placeholder=""></textarea>
         </div>
     </div>
+    <div class="uk-margin uk-width-2-3">
+        <label class="uk-form-label" for="form-horizontal-text">Penyakit</label>
+        <div class="uk-form-controls">
+            <textarea name="disease" class="uk-textarea" rows="5" placeholder=""></textarea>
+        </div>
+    <div class="uk-margin uk-width-2-3">
+        <label class="uk-form-label" for="form-horizontal-text">Deskripsi</label>
+        <div class="uk-form-controls">
+            <textarea name="description" class="uk-textarea" rows="5" placeholder=""></textarea>
+        </div>
+    </div>
 @foreach ($sistol as $data)
-     <div class="uk-margin uk-width-2-3"">
+     <div class="uk-margin uk-width-2-3">
         <label class="uk-form-label" for="form-horizontal-text">Sistol</label>
         <div class="uk-form-controls">
             <input name="sistol" class="uk-input" id="form-horizontal-text" type="text" value="{{$data}}">
@@ -94,7 +111,7 @@
 @endforeach
     </div>
 @foreach ($diastol as $data)
-     <div class="uk-margin uk-width-2-3"">
+     <div class="uk-margin uk-width-2-3">
         <label class="uk-form-label" for="form-horizontal-text">Diastol</label>
         <div class="uk-form-controls">
             <input name="diastol" class="uk-input" id="form-horizontal-text" type="text" value="{{$data}}">

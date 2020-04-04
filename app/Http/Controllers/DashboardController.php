@@ -94,10 +94,14 @@ class DashboardController extends Controller
         // Patients::create($request->all());
         $req->name = $request->input('name');
         $req->place_of_birth = $request->input('place_of_birth');
+        $req->email = $request->input('email');
+        $req->doctor_name = $request->session()->get('name');
         $req->date_of_birth = $request->input('date_of_birth');
         $req->gender = $request->input('gender');
         $req->address = $request->input('address');
+        $req->address = $request->input('description');
         $req->history_of_disease = $request->input('history_of_disease');
+        $req->disease = $request->input('disease');
         $req->sistol = $request->input('sistol');
         $req->diastol = $request->input('diastol');
         $req->status = $status;
@@ -112,13 +116,16 @@ class DashboardController extends Controller
 
         $newPatient = $refPatient
         ->push([
-        'id_patient' => trim($random_key) ,
-        'nama' => $name ,
+        'id_check' => trim($random_key) ,
+        'nama' => $req->name ,
+        'email' => $req->email ,
         'tempat_lahir' => $req->place_of_birth ,
-        'tanggal_lahir' => $req->date_of_birth ,
+        'tanggal' => $req->date_of_birth ,
         'jenis_kelamin' => $req->gender ,
+        'nama_dokter' => $req->doctor_name ,
         'alamat' => $req->address ,
         'riwayat_penyakit' => $req->history_of_disease ,
+        'disease' => $req->history_of_disease ,
         'sistol' => $req->sistol ,
         'diastol' => $req->diastol ,
         ]);
