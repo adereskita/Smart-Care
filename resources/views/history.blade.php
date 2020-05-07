@@ -50,7 +50,7 @@
                 <h2 class="uk-heading uk-align-left">
                     Patients List
                 </h2>
-                <a class="uk-align-right uk-link-reset" href="/createData">
+                <a id="create-patient" class="uk-align-right uk-link-reset" href="/createData">
                     <button class="uk-button uk-button-primary" uk-button>
                         Create Patient
                     </button>
@@ -62,7 +62,7 @@
                      <tr>
                         <th>Nama</th>
                         <th>Tempat Lahir</th>
-                        <th>Tanggal Lahir</th>
+                        <th>Tanggal Check Up</th>
                         <th>Jenis Kelamin</th>
                         <th>Alamat</th>
                         <th>Riwayat Penyakit</th>
@@ -78,7 +78,7 @@
                 <tr class="uk-text-capitalize">
                     <td>{{$Patients->name}}</td>
                     <td>{{$Patients->place_of_birth}}</td>
-                    <td>{{$Patients->date_of_birth}}</td>
+                    <td>{{$Patients->date}}</td>
                     <td>{{$Patients->gender}}</td>
                     <td>{{$Patients->address}}</td>
                     <td>{{$Patients->history_of_disease}}</td>

@@ -38,7 +38,7 @@ Route::get('/createData', 'DashboardController@create');
 
 Route::get('/history', 'DashboardController@history');
 
-Route::post('/createData/created', 'DashboardController@created' );
+Route::post('/createData/created', 'DashboardController@created')->name('createData.created');
 
 // Route::get('/firebase','FirebaseController@index');
 

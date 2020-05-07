@@ -51,57 +51,73 @@
     <div class="uk-margin uk-width-2-3">
         <label class="uk-form-label" for="form-horizontal-text">Nama Pasien</label>
         <div class="uk-form-controls">
-            <input name="name" class="uk-input" id="form-horizontal-text" type="text" placeholder="">
+            <input id="namas" name="name" class="uk-input" id="form-horizontal-text" type="text" placeholder="">
         </div>
     </div>
     <div class="uk-margin uk-width-2-3">
         <label class="uk-form-label" for="form-horizontal-text">Email</label>
         <div class="uk-form-controls">
-            <input name="email" class="uk-input" id="form-horizontal-text" type="text" placeholder="">
+            <input id="emails" name="email" class="uk-input" id="form-horizontal-text" type="text" placeholder="">
         </div>
     </div>
      <div class="uk-margin uk-width-2-3">
         <label class="uk-form-label" for="form-horizontal-text">Tempat Lahir</label>
         <div class="uk-form-controls">
-            <input name="place_of_birth" class="uk-input" id="form-horizontal-text" type="text" placeholder="">
+            <input id="ttl" name="place_of_birth" class="uk-input" id="form-horizontal-text" type="text" placeholder="">
         </div>
     </div>
     <div class="uk-margin uk-width-2-3">
         <label class="uk-form-label" for="form-horizontal-text">Tanggal Check Up</label>
         <div class="uk-form-controls">
-            <input name="date" class="uk-input" id="form-horizontal-text" type="date" placeholder="">
+            <input id="tgl-check" name="date" class="uk-input" id="form-horizontal-text" type="date" placeholder="">
         </div>
     </div>
     <div class="uk-margin uk-width-2-3">
         <div class="uk-form-label">Jenis Kelamin</div>
         <div name="gender" class="uk-form-controls uk-form-controls-text">
-            <label><input class="uk-radio" value="pria" type="radio" name="gender"> Laki - Laki </label>
-            <label><input class="uk-radio" value="wanita" type="radio" name="gender"> Perempuan </label>
+            <label><input id="laki" class="uk-radio" value="pria" type="radio" name="gender"> Laki - Laki </label>
+            <label><input id="perempuan" class="uk-radio" value="wanita" type="radio" name="gender"> Perempuan </label>
         </div>
     </div>
     <div class="uk-margin uk-width-2-3">
         <label class="uk-form-label" for="form-horizontal-text">Alamat</label>
         <div class="uk-form-controls">
-            <textarea name="address" class="uk-textarea" rows="5" placeholder=""></textarea>
+            <textarea id="alamats" name="address" class="uk-textarea" rows="5" placeholder=""></textarea>
         </div>
     </div>
     <div class="uk-margin uk-width-2-3">
         <label class="uk-form-label" for="form-horizontal-text">Riwayat Penyakit</label>
         <div class="uk-form-controls">
-            <textarea name="history_of_disease" class="uk-textarea" rows="5" placeholder=""></textarea>
+            <textarea id="riwayats" name="history_of_disease" class="uk-textarea" rows="5" placeholder=""></textarea>
         </div>
     </div>
     <div class="uk-margin uk-width-2-3">
         <label class="uk-form-label" for="form-horizontal-text">Penyakit</label>
         <div class="uk-form-controls">
-            <textarea name="disease" class="uk-textarea" rows="5" placeholder=""></textarea>
+            <textarea id="penyakits" name="disease" class="uk-textarea" rows="5" placeholder=""></textarea>
         </div>
     <div class="uk-margin uk-width-2-3">
         <label class="uk-form-label" for="form-horizontal-text">Deskripsi</label>
         <div class="uk-form-controls">
-            <textarea name="description" class="uk-textarea" rows="5" placeholder=""></textarea>
+            <textarea id="deskripsi" name="deskripsi" class="uk-textarea" rows="5" placeholder=""></textarea>
         </div>
     </div>
+    <div class="uk-margin uk-width-2-3">
+        <label class="uk-form-label" for="form-horizontal-text">Obat</label>
+            <div class="uk-form-controls">
+                <span id="result"></span>
+                <div>
+                    <table class="uk-table">
+                        <caption>obat rekomendasi untuk pasien</caption>
+                        <tbody>
+                            
+                        </tbody>
+                    </table>
+                </div>
+
+            </div>
+    </div>
+                    
 @foreach ($sistol as $data)
      <div class="uk-margin uk-width-2-3">
         <label class="uk-form-label" for="form-horizontal-text">Sistol</label>
@@ -119,12 +135,74 @@
 @endforeach
     </div>
     <div class="uk-margin">
-        <button class="uk-button uk-button-primary uk-width-1-2 uk-align-center uk-margin">Submit</button>
+        <button id="btn-submits" class="uk-button uk-button-primary uk-width-1-2 uk-align-center uk-margin">Submit</button>
     </div>
 </form>
 </section>
 
 <script src="{{ mix('js/app.js') }}"></script>
+
+<script>
+    $(document).ready(function() {
+        var count = 1;
+
+        addRow(count);
+
+        function addRow(number) {
+        var html='<tr>';
+        html += '<td><input class="uk-input" placeholder="nama obat" type="text" name="nama_obat[]"></td>';
+
+        if (number > 1) {
+            html += '<td><button id="btn-delete" class="uk-button-medium uk-button-danger uk-width-1-2 uk-align-center uk-margin"> <span class="" uk-icon="close"></span></button></td></tr>';
+            $('tbody').append(html);
+        } else {
+            html += '<td><a class="uk-button-small uk-button-primary" id="addrow">add</a></td></tr>';
+            $('tbody').append(html);
+
+        }
+    } 
+
+        $(document).on('click', '#addrow', function(){
+            count++;
+            addRow(count);
+        });
+        $(document).on('click', '#btn-delete', function(){
+            count--;
+            $(this).closest("tr").remove();
+            
+        });
+        $('#form-input').on('submit', '#btn-submits', function(event){
+            event.preventDefault();
+            $.ajax({
+                url:'{{ route("createData.created") }}',
+                method:'post',
+                data:$(this).serialize(),
+                dataType:'json',
+                beforeSend:function(){
+                    $('#btn-submits').attr('disabled','disabled');
+                },
+                success:function(data)
+                {
+                    if(data.error)
+                    {
+                        var error_html = '';
+                        for(var count = 0; count < data.error.length; count++)
+                        {
+                            error_html += '<p>'+data.error[count]+'</p>';
+                        }
+                        $('#result').html('<div class="uk-alert-danger">'+error_html+'</div>');
+                    }
+                    else
+                    {
+                        addRow(1);
+                        $('#result').html('<div class="uk-alert-success">'+data.success+'</div>');
+                    }
+                    $('#btn-submits').attr('disabled', false);
+                }
+            });
+        });
+    });
+</script>
 
 
 </body>

@@ -10,10 +10,10 @@ class Patients extends Model
     protected $fillable = [
         'name',
         'place_of_birth',
-        'date_of_birth',
+        'date',
         'gender',
         'address',
-        'description',
+        'deskripsi',
         'history_of_disease',
         'doctor_name',
         'sistol',
@@ -21,5 +21,9 @@ class Patients extends Model
 
         public function doctors(){
             return $this->belongsTo('App\ModelDoctor');
+        }
+
+        public function obatPasien(){
+            return $this->hasMany('App\ObatModel');
         }
 }

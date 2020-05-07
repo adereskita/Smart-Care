@@ -3,7 +3,9 @@
 namespace App\Http\Controllers;
 
 use App\ModelDoctor;
+use App\ObatModel;
 use Illuminate\Http\Request;
+use Validator;
 use Illuminate\Support\Facades\Session;
 use App\Patients;
 use Illuminate\View\View;
@@ -96,10 +98,10 @@ class DashboardController extends Controller
         $req->place_of_birth = $request->input('place_of_birth');
         $req->email = $request->input('email');
         $req->doctor_name = $request->session()->get('name');
-        $req->date_of_birth = $request->input('date_of_birth');
+        $req->date = $request->input('date');
         $req->gender = $request->input('gender');
         $req->address = $request->input('address');
-        $req->address = $request->input('description');
+        $req->deskripsi = $request->input('deskripsi');
         $req->history_of_disease = $request->input('history_of_disease');
         $req->disease = $request->input('disease');
         $req->sistol = $request->input('sistol');
@@ -109,7 +111,59 @@ class DashboardController extends Controller
 
         $name = $request->session()->get('name');
 
-        //push data to database firebase
+        // for multiple variable obat
+        $email = $request->input('email');
+        $patients = Patients::where('email', $email)->get();
+        foreach ($patients as $key => $attribute) {
+            $id = $attribute->id; //get the patient id
+        }
+
+        // if($request->ajax())
+        // {
+            $rules = array(
+                'nama_obat.*'  => 'required'
+                );
+                $error = Validator::make($request->all(), $rules);
+                    if($error->fails())
+                    {
+                        return response()->json([
+                            'error'  => $error->errors()->all()
+                        ]);
+                    }
+    
+                $email_pasien = $request->input('email');
+    
+                $nama_obat = $request->nama_obat;
+    
+                for($count = 0; $count < count($nama_obat); $count++)
+                {
+                    $data = array(
+                        'nama_obat' => $nama_obat[$count],
+                        'user_email' => $email_pasien,
+                        'user_id' => $id
+                    );
+                    $insert_data[] = $data; 
+                }
+                ObatModel::insert($insert_data);
+                // return response()->json([
+                //     'success'  => 'Data Added successfully.'
+                // ]);
+            // }
+            $refObat = $database->getReference('Obat');
+
+            for($count = 0; $count < count($nama_obat); $count++)
+            {
+                $newObat = $refObat
+                ->push([
+                    'user_id' => $id ,
+                    'nama_obat' => $nama_obat[$count],
+                    'user_email' => $email_pasien ,
+
+                 ]);
+            }
+
+
+        //pushdata to database firebase
         $random_key = Str::random(16);
         // $refPatient = $database->getReference('Pasien/'.trim($random_key));
         $refPatient = $database->getReference('Pasien');
@@ -117,6 +171,7 @@ class DashboardController extends Controller
         $newPatient = $refPatient
         ->push([
         'id_check' => trim($random_key) ,
+        'user_id' => $id ,
         'nama' => $req->name ,
         'email' => $req->email ,
         'tempat_lahir' => $req->place_of_birth ,

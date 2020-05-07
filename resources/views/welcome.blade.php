@@ -35,9 +35,9 @@
             </div>
             <div class="uk-navbar-right uk-margin-large-right">
                 <ul id="nav-item" class="uk-navbar-nav uk-text-light">
-                    <li class="uk-nav"><a style="color:#ffffff" href="#heading-line" uk-scroll>Home</a></li>
-                    <li class="uk-nav"><a style="color:#ffffff" href="#feature-container" uk-scroll>Feature</a></li>
-                    <li class="uk-nav"><a style="color:#ffffff" href="#about-container" uk-scroll>About</a></li>
+                    <li class="uk-nav"><a id="homes" style="color:#ffffff" href="#heading-line" uk-scroll>Home</a></li>
+                    <li class="uk-nav"><a id="feature" style="color:#ffffff" href="#feature-container" uk-scroll>Feature</a></li>
+                    <li class="uk-nav"><a id="about" style="color:#ffffff" href="#about-container" uk-scroll>About</a></li>
                     <li class="uk-nav"><a style="color:#ffffff" href="#contact-head" uk-scroll>Contact Us</a></li>
                 </ul>
                 <div class="uk-navbar-item uk-visible@m">

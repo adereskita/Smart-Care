@@ -20,7 +20,7 @@ class CreatePatientsTable extends Migration
             $table->date("date");
             $table->string("gender");
             $table->text("address");
-            $table->text("description");
+            $table->text("deskripsi")->nullable();
             $table->string('doctor_name')->nullable();
             $table->text("history_of_disease")->nullable();
             $table->text("disease");
