@@ -111,6 +111,9 @@ class DashboardController extends Controller
 
         $name = $request->session()->get('name');
 
+        //pushdata to database firebase with random key purpose
+        $random_key = Str::random(16);
+
         // for multiple variable obat
         $email = $request->input('email');
         $patients = Patients::where('email', $email)->get();
@@ -149,22 +152,22 @@ class DashboardController extends Controller
                 //     'success'  => 'Data Added successfully.'
                 // ]);
             // }
+
+            //push data to firebase with 'Obat' parent
             $refObat = $database->getReference('Obat');
 
             for($count = 0; $count < count($nama_obat); $count++)
             {
                 $newObat = $refObat
                 ->push([
-                    'user_id' => $id ,
+                    'id_check' => trim($random_key) ,
+                    // 'user_id' => $id ,
                     'nama_obat' => $nama_obat[$count],
                     'user_email' => $email_pasien ,
-
                  ]);
             }
 
 
-        //pushdata to database firebase
-        $random_key = Str::random(16);
         // $refPatient = $database->getReference('Pasien/'.trim($random_key));
         $refPatient = $database->getReference('Pasien');
 
@@ -175,12 +178,13 @@ class DashboardController extends Controller
         'nama' => $req->name ,
         'email' => $req->email ,
         'tempat_lahir' => $req->place_of_birth ,
-        'tanggal' => $req->date_of_birth ,
+        'tanggal' => $req->date ,
         'jenis_kelamin' => $req->gender ,
         'nama_dokter' => $req->doctor_name ,
         'alamat' => $req->address ,
         'riwayat_penyakit' => $req->history_of_disease ,
-        'disease' => $req->history_of_disease ,
+        'deskripsi' => $req->deskripsi ,
+        'disease' => $req->disease ,
         'sistol' => $req->sistol ,
         'diastol' => $req->diastol ,
         ]);
