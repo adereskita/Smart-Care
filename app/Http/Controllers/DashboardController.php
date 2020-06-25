@@ -15,6 +15,8 @@ use Kreait\Firebase\ServiceAccount;
 use Kreait\Firebase\Database;
 use App\Charts\DocChart;
 use Illuminate\Support\Str;
+use Maatwebsite\Excel\Facades\Excel;
+use App\Exports\PatientExport;
 
 
 class DashboardController extends Controller
@@ -30,21 +32,24 @@ class DashboardController extends Controller
             $email = $request->session()->get('email');
             $data = ModelDoctor::where('email',$email)->get();
 
-            $patient = Patients::all()->take(5);
+            $patient = Patients::orderby('date', 'desc')->take(5)->get();
 
-            $docChart = new DocChart;
-            $docChart->labels(['Jan', 'Feb', 'Mar']);
-            $docChart->dataset('Users by trimester', 'line', [10, 25, 13]);
+            // for chart, no use anymore
+            // $docChart = new DocChart;
+            // $docChart->labels(['Jan', 'Feb', 'Mar']);
+            // $docChart->dataset('Users by trimester', 'line', [10, 25, 13]);
 
             return view('/dashboard', ['data' => $data,
-            'patients' => $patient,
-            'usersChart' => $docChart ]);
+            'patients' => $patient ]);
+            // 'usersChart' => $docChart ]);
 		}
     }
 
     public function history()
 	{
-        $data_patient = Patients::all();
+        //here sortable() is a third-party package that use for sorting table data
+        // u can use this library for ex : $users = $user->sortable('name')->paginate(10);
+        $data_patient = Patients::sortable()->paginate(10);
 		return view('history',['data_patient' => $data_patient]);
     }
 
@@ -95,6 +100,7 @@ class DashboardController extends Controller
 
         // Patients::create($request->all());
         $req->name = $request->input('name');
+        $req->id_nik = $request->input('id_nik');
         $req->place_of_birth = $request->input('place_of_birth');
         $req->email = $request->input('email');
         $req->doctor_name = $request->session()->get('name');
@@ -175,6 +181,7 @@ class DashboardController extends Controller
         ->push([
         'id_check' => trim($random_key) ,
         'user_id' => $id ,
+        'id_nik' => $req->$id_nik ,
         'nama' => $req->name ,
         'email' => $req->email ,
         'tempat_lahir' => $req->place_of_birth ,
@@ -187,10 +194,27 @@ class DashboardController extends Controller
         'disease' => $req->disease ,
         'sistol' => $req->sistol ,
         'diastol' => $req->diastol ,
+        'status' => $status ,
         ]);
 
         // return redirect('/dashboard')-with('session',$name);
     	return redirect('/dashboard')->with('success', 'Added Patient Complete');
+    }
+
+    public function search(Request $req)
+    {
+        $search = $req->search;
+        
+        //sortable is 3rd party method from columnsortable
+        // foreach ($user as $key => $attribute) {
+            $patient = Patients::sortable()->where('name', 'like', '%'.$search.'%')
+            ->orderby('date', 'desc')
+            ->paginate();
+
+            return view('history',[ 'data_patient' => $patient]);
+            // return view('history', compact('data_patient'))->render();
+
+        // }
     }
 
     public function profile(Request $request){
@@ -217,4 +241,38 @@ class DashboardController extends Controller
 
         return redirect('/profile')->with(['doctor' => $data]);
     }
+
+    public function export(Request $request)
+    {
+        return Excel::download(new PatientExport, 'pasien_'.date("Y-m-d").'.xlsx');
+
+    }
+
+    public function fetch_data(Request $request)
+    {
+        if($request->ajax()){
+            // return "AJAX";
+            $sort_by = $request->get('sortby');
+            $sort_type = $request->get('sorttype');
+                    $query = $request->get('query');
+                    $query = str_replace(" ", "%", $query);
+    
+            $data_patient = Patients::orderBy($sort_by, $sort_type)
+                            ->paginate(5);
+
+            // return view('history', compact('data_patient'))->render();
+
+        }
+        // return "HTTP";
+        // $data_patient = Patients::paginate(10);
+        // $data = DB::table('post')
+        //                 ->where('id', 'like', '%'.$query.'%')
+        //                 ->orWhere('post_title', 'like', '%'.$query.'%')
+        //                 ->orWhere('post_description', 'like', '%'.$query.'%')
+        //                 ->orderBy($sort_by, $sort_type)
+        //                 ->paginate(5);
+
+        // }
+    }
+
 }

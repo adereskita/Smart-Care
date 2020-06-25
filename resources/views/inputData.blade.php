@@ -1,12 +1,11 @@
 <!DOCTYPE html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
 <head>
-	<title></title>
-	<meta charset="utf-8">
+    	<meta charset="utf-8">
 	    <meta name="viewport" content="width=device-width, initial-scale=1">
 		<meta name="csrf-token" content="{{ csrf_token() }}">
 
-        <title>Input | Smart Care</title>
+        <title>Input Patient | Smart Care</title>
 
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
@@ -52,6 +51,12 @@
         <label class="uk-form-label" for="form-horizontal-text">Nama Pasien</label>
         <div class="uk-form-controls">
             <input id="namas" name="name" class="uk-input" id="form-horizontal-text" type="text" placeholder="">
+        </div>
+    </div>
+    <div class="uk-margin uk-width-2-3">
+        <label class="uk-form-label" for="form-horizontal-text">NIK KTP</label>
+        <div class="uk-form-controls">
+            <input id="id_nik" name="id_nik" class="uk-input" id="form-horizontal-text" type="text" placeholder="NIK KTP">
         </div>
     </div>
     <div class="uk-margin uk-width-2-3">

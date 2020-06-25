@@ -1,0 +1,56 @@
+html{
+    background-color: #F8FAFC ;
+    width: 100%;
+    font-family: 'Open Sans', sans-serif;
+
+}
+/* @media (max-width: 600px) {
+  section {
+    -webkit-flex-direction: column;
+    flex-direction: column;
+  }
+} */
+section {
+  display: -webkit-flex;
+  display: flex;
+}
+
+#navbar{
+    background: #ffffff;
+    height: 100vh;
+}
+
+#navbar{
+  z-index: 1;
+  top: 0;
+  left: 0;
+}
+
+/* #viewPasien{ */
+  /* margin-left: 240px !important; Same width as the sidebar + left position in px */
+  /* padding: 0px 10px; */
+/* } */
+
+html{
+  position: absolute;
+}
+
+p{
+	font-size: 14px;
+}
+
+#form-input{
+  flex: 8;
+  width: 75%;
+  background-color: #ffffff;
+  padding: 2%;
+  margin: 2%;
+}
+
+#viewPasien{
+  background-color: #ffffff;
+  padding: 20px;
+  margin: 30px;
+  height: 100vh;
+  overflow-y: hidden;
+}
