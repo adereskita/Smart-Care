@@ -41,14 +41,14 @@
                     <div class="uk-margin">
                         <div class="uk-inline uk-width-large">
                             <span class="uk-form-icon uk-form-icon-flip" uk-icon="icon: mail"></span>
-                            <input class="uk-input" name="email" type="email" placeholder="Email">
+                            <input id="emails" class="uk-input" name="email" type="email" placeholder="Email">
                         </div>
                     </div>
                     <!-- PASSWORD -->
                     <div class="uk-margin">
                         <div class="uk-inline uk-width-large">
                             <span class="uk-form-icon uk-form-icon-flip" uk-icon="icon: lock"></span>
-                            <input class="uk-input" name="password" type="password" placeholder="Password">
+                            <input id="passwords" class="uk-input" name="password" type="password" placeholder="Password">
                         </div>
                     </div>
                     <div class="uk-margin">

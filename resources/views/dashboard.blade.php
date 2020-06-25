@@ -37,13 +37,13 @@
                         <span class="uk-margin-small-left">Dashboard</span>
                     </div>
                 </a>
-                <a class="uk-link-heading" href="./history">
+                <a id="history" class="uk-link-heading" href="./history">
                     <div class="uk-padding-small uk-text-justify uk-text-bold uk-margin-left">
                         <span uk-icon="icon: list; ratio: 1"></span>
                         <span class="uk-margin-small-left">History</span>
                     </div>
                 </a>
-                <a class="uk-link-heading" href="./profile">
+                <a id="profiles" class="uk-link-heading" href="./profile">
                     <div class="uk-padding-small uk-text-justify uk-text-bold uk-margin-left">
                         <span uk-icon="icon: user; ratio: 1"></span>
                         <span class="uk-margin-small-left">Profile</span>
@@ -77,11 +77,11 @@
     </div>
 
     <div class="uk-margin-left uk-margin-medium-top uk-height-small uk-align-left">
-        <div id="recent" class="uk-margin-right uk-padding uk-overflow-auto uk-width-1-2">
+        <div id="recent" class="uk-margin-right uk-padding uk-overflow-auto uk-width-1">
             <h3 class="uk-margin-bottom uk-align-left">
                 Recent History
             </h3>
-                <a class="uk-text-capitalize uk-button uk-button-primary uk-width-1-3 uk-padding-remove" href="/createData">
+                <a class="uk-text-capitalize uk-button uk-button-primary uk-width-1-6 uk-padding-remove" href="/createData">
                     Daftar Pasien
                 </a>
             <div class="uk-overflow-auto uk-margin">
@@ -90,7 +90,7 @@
                             <tr>
                                 <th>Nama</th>
                                 <th>Tempat Lahir</th>
-                                <th>Tanggal Lahir</th>
+                                <th>Tanggal Check up</th>
                                 <th>Jenis Kelamin</th>
                                 <th>Alamat</th>
                                 <th>Riwayat Penyakit</th>
@@ -104,7 +104,8 @@
                             <tr class="uk-text-capitalize">
                                 <td>{{$item->name}}</td>
                                 <td>{{$item->place_of_birth}}</td>
-                                <td>{{$item->date_of_birth}}</td>                                    <td>{{$item->gender}}</td>
+                                <td>{{$item->date}}</td>
+                                <td>{{$item->gender}}</td>
                                 <td>{{$item->address}}</td>
                                 <td>{{$item->history_of_disease}}</td>
                                 <td>{{$item->sistol}}</td>
@@ -114,13 +115,6 @@
                         </tbody>
                     @endforeach
                 </table>
-            </div>
-        </div>
-    </div>
-        <div class="uk-margin-medium-left uk-margin-medium-top uk-margin-right uk-flex uk-flex-right uk-width-1-1">
-            <div id="chart" class="uk-width-1-2 uk-height-large uk-padding">
-                    <h5 class="uk-text-bold">Daily Patients</h5>
-                    <canvas id="myChart" width="120" height="120"></canvas>
             </div>
         </div>
     </div>

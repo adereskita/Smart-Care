@@ -1,8 +1,7 @@
 <!DOCTYPE html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
 <head>
-	<title></title>
-	<meta charset="utf-8">
+	    <meta charset="utf-8">
 	    <meta name="viewport" content="width=device-width, initial-scale=1">
 		<meta name="csrf-token" content="{{ csrf_token() }}">
 
@@ -71,8 +70,7 @@
     <div class="uk-margin uk-width-2-3"">
         <label class="uk-form-label" for="form-horizontal-text">Phone Number</label>
         <div class="uk-form-controls">
-        <input name="phone" class="uk-input" id="form-horizontal-text" type="text" value="{{$item->phone}}">
-            {{-- <textarea name="phone" class="uk-textarea" rows="5"></textarea> --}}
+        <input id="phones" name="phone" class="uk-input" id="form-horizontal-text" type="text" value="{{$item->phone}}">
         </div>
     </div>
     <div class="uk-margin uk-width-2-3"">
